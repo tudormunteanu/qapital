@@ -14,3 +14,5 @@
 
 
 #define kColorText [UIColor whiteColor]
+#define kColorGradient [[UIColor colorWithString:@"464c4e"] colorWithAlphaComponent:0.6f]
+#define kColorQapitalMain [UIColor colorWithString:@"00abbd"]

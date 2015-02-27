@@ -11,11 +11,11 @@
 #import "TMDataManager.h"
 #import "TMGoal.h"
 #import "TMGoalTableViewCell.h"
-#import "TMGoalsViewController.h"
+#import "TMGoalListViewController.h"
 
 static NSString *cellIdentifier = @"goalCell";
 
-@interface TMGoalsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TMGoalListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) TMDataManager *dataManager;
 @property (nonatomic, strong) NSArray       *goals;
@@ -23,7 +23,7 @@ static NSString *cellIdentifier = @"goalCell";
 
 @end
 
-@implementation TMGoalsViewController
+@implementation TMGoalListViewController
 
 #pragma mark - Lifecycle
 
@@ -62,6 +62,7 @@ static NSString *cellIdentifier = @"goalCell";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.rowHeight = 320;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     weakify(self);
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,6 +70,14 @@ static NSString *cellIdentifier = @"goalCell";
         strongify(weakSelf);
         make.edges.equalTo(strongSelf.view);
     }];
+    
+    //
+    // NavBar
+    //
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                  target:self action:@selector(addButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)viewDidLoad {
@@ -83,15 +92,29 @@ static NSString *cellIdentifier = @"goalCell";
     [self.dataManager getGoals:^(NSArray *goals) {
         
         strongify(weakSelf);
-        self.goals = goals;
+        strongSelf.goals = goals;
         [strongSelf.tableView reloadData];
     } failure:^(NSError *error) {
-        
         
     }];
 }
 
+#pragma mark buttons
+
+- (void)addButtonPressed:(UIButton *)snder {
+    
+    
+}
+
 #pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TMGoal *goal = self.goals[indexPath.row];
+    NSString *urlString = [NSString stringWithFormat:@"qapital://goal/view/%@", goal.goalId];
+    NSURL *viewUserURL = [NSURL URLWithString:urlString];
+    [[UIApplication sharedApplication] openURL:viewUserURL];
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -109,9 +132,9 @@ static NSString *cellIdentifier = @"goalCell";
     }
     TMGoal *goal = self.goals[indexPath.row];
     NSURL *imageURL = [NSURL URLWithString:goal.goalImageURL];
-    [cell.backgroundImageView setImageWithURL:imageURL];
-    cell.textLabel.text = goal.name;
-    cell.detailTextLabel.text = @"$1,582 saved of $3,090";
+    [cell setBackgroundImageWithURL:imageURL];
+    cell.titleLabel.text = goal.name;
+    cell.subtitleLabel.text = @"$1,582 saved of $3,090";
     return cell;
 }
 

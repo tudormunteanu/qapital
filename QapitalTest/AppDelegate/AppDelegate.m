@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "TMGoalsViewController.h"
+#import "TMAppearence.h"
+#import "TMGoalListViewController.h"
+#import "TMRoutes.h"
 
 @interface AppDelegate ()
 
@@ -17,11 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    TMGoalsViewController *goalsController = [[TMGoalsViewController alloc] initWithNibName:nil bundle:nil];
+    [[TMAppearence defaultAppearence] setupUIAppearance];
+    
+    TMGoalListViewController *goalsController = [[TMGoalListViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:goalsController];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
+    //
+    // Initialise the routes
+    //
+    [TMRoutes initialise];
+    
     return YES;
 }
 
@@ -48,6 +57,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    return [TMRoutes routeURL:url];
 }
 
 @end

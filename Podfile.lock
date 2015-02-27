@@ -20,19 +20,25 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - ColorUtils (1.1.3)
   - DCKeyValueObjectMapping (1.4)
+  - JLRoutes (1.5.1)
   - Kiwi (2.3.1)
   - Masonry (0.6.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - ColorUtils
   - DCKeyValueObjectMapping
+  - JLRoutes
   - Kiwi
   - Masonry
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
+  ColorUtils: d99b38d2a7abf81df1698477b19f895576578738
   DCKeyValueObjectMapping: c3561709f296ddffba7768a9d7ccf234307fd3c9
+  JLRoutes: 3400fe314fc01c861a14ff7e183d209b0cd302ae
   Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
   Masonry: 2cb49fd14d203d2db5ca6bb017135b235dde9980
 

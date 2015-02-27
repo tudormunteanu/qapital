@@ -15,6 +15,10 @@
 @property (nonatomic, strong) UIFont *benton16;
 @property (nonatomic, strong) UIFont *benton32;
 
+@property (nonatomic, strong) UIFont *bentonBold32;
+
 + (TMAppearence *)defaultAppearence;
+
+- (void)setupUIAppearance;
 
 @end

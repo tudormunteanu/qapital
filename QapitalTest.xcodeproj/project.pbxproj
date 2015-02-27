@@ -19,12 +19,16 @@
 		AA636F211A9F1D3300E7AFE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA636F201A9F1D3300E7AFE2 /* AppDelegate.m */; };
 		AA636F281A9F1D5300E7AFE2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA636F231A9F1D5300E7AFE2 /* LaunchScreen.xib */; };
 		AA636F2A1A9F1D5300E7AFE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA636F271A9F1D5300E7AFE2 /* Images.xcassets */; };
-		AA636F351A9F1E4E00E7AFE2 /* TMGoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA636F341A9F1E4E00E7AFE2 /* TMGoalsViewController.m */; };
 		AABD7EA31A9F73CE003919E8 /* TMGoalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EA21A9F73CE003919E8 /* TMGoalTableViewCell.m */; };
 		AABD7EAA1A9F7C9B003919E8 /* BentonSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AABD7EA61A9F7C9B003919E8 /* BentonSans-Bold.otf */; };
 		AABD7EAB1A9F7C9B003919E8 /* BentonSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AABD7EA71A9F7C9B003919E8 /* BentonSans-Light.otf */; };
 		AABD7EAC1A9F7C9B003919E8 /* BentonSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AABD7EA81A9F7C9B003919E8 /* BentonSans-Medium.otf */; };
 		AABD7EAD1A9F7C9B003919E8 /* BentonSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AABD7EA91A9F7C9B003919E8 /* BentonSans-Regular.otf */; };
+		AABD7EB11AA059B2003919E8 /* TMGoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EB01AA059B2003919E8 /* TMGoalListViewController.m */; };
+		AABD7EB51AA059DC003919E8 /* TMGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EB41AA059DC003919E8 /* TMGoalViewController.m */; };
+		AABD7EB91AA06179003919E8 /* TMRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EB81AA06179003919E8 /* TMRoutes.m */; };
+		AABD7EBD1AA077B8003919E8 /* TMGoalView.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EBC1AA077B8003919E8 /* TMGoalView.m */; };
+		AABD7EC11AA08D48003919E8 /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EC01AA08D48003919E8 /* UIImage+Gradient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +66,6 @@
 		AA636F201A9F1D3300E7AFE2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AA636F241A9F1D5300E7AFE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AA636F271A9F1D5300E7AFE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AA636F331A9F1E4E00E7AFE2 /* TMGoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGoalsViewController.h; sourceTree = "<group>"; };
-		AA636F341A9F1E4E00E7AFE2 /* TMGoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGoalsViewController.m; sourceTree = "<group>"; };
 		AABD7EA11A9F73CE003919E8 /* TMGoalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGoalTableViewCell.h; sourceTree = "<group>"; };
 		AABD7EA21A9F73CE003919E8 /* TMGoalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGoalTableViewCell.m; sourceTree = "<group>"; };
 		AABD7EA41A9F7C3A003919E8 /* Colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
@@ -71,6 +73,16 @@
 		AABD7EA71A9F7C9B003919E8 /* BentonSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Light.otf"; sourceTree = "<group>"; };
 		AABD7EA81A9F7C9B003919E8 /* BentonSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Medium.otf"; sourceTree = "<group>"; };
 		AABD7EA91A9F7C9B003919E8 /* BentonSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans-Regular.otf"; sourceTree = "<group>"; };
+		AABD7EAF1AA059B2003919E8 /* TMGoalListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGoalListViewController.h; sourceTree = "<group>"; };
+		AABD7EB01AA059B2003919E8 /* TMGoalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGoalListViewController.m; sourceTree = "<group>"; };
+		AABD7EB31AA059DC003919E8 /* TMGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGoalViewController.h; sourceTree = "<group>"; };
+		AABD7EB41AA059DC003919E8 /* TMGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGoalViewController.m; sourceTree = "<group>"; };
+		AABD7EB71AA06179003919E8 /* TMRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRoutes.h; sourceTree = "<group>"; };
+		AABD7EB81AA06179003919E8 /* TMRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRoutes.m; sourceTree = "<group>"; };
+		AABD7EBB1AA077B8003919E8 /* TMGoalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMGoalView.h; sourceTree = "<group>"; };
+		AABD7EBC1AA077B8003919E8 /* TMGoalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGoalView.m; sourceTree = "<group>"; };
+		AABD7EBF1AA08D48003919E8 /* UIImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
+		AABD7EC01AA08D48003919E8 /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
 		AAF86B111A9F2D8A00BFACB0 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		AAF86B121A9F2DB800BFACB0 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		DA7B2B7630994D0622440B21 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +121,9 @@
 		AA24F78E1A9F4FE80038C179 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				AA24F7931A9F557A0038C179 /* TMDataManager */,
 				AA24F78F1A9F4FE80038C179 /* TMAppearence */,
+				AA24F7931A9F557A0038C179 /* TMDataManager */,
+				AABD7EB61AA06169003919E8 /* TMRoutes */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 		AA636EF41A9F1B0100E7AFE2 /* QapitalTest */ = {
 			isa = PBXGroup;
 			children = (
+				AABD7EBE1AA08CD4003919E8 /* UIImage+Gradient */,
 				AA636F1E1A9F1D3300E7AFE2 /* AppDelegate */,
 				AAF86B101A9F2D8A00BFACB0 /* Constants */,
 				AA636F2D1A9F1E3900E7AFE2 /* Controllers */,
@@ -253,18 +267,10 @@
 		AA636F2D1A9F1E3900E7AFE2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA636F2E1A9F1E3900E7AFE2 /* TMGoalsViewController */,
+				AABD7EB21AA059C1003919E8 /* TMGoalViewController */,
+				AABD7EAE1AA059B2003919E8 /* TMGoalListViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		AA636F2E1A9F1E3900E7AFE2 /* TMGoalsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				AA636F331A9F1E4E00E7AFE2 /* TMGoalsViewController.h */,
-				AA636F341A9F1E4E00E7AFE2 /* TMGoalsViewController.m */,
-			);
-			path = TMGoalsViewController;
 			sourceTree = "<group>";
 		};
 		AA636F361A9F268D00E7AFE2 /* Models */ = {
@@ -279,6 +285,7 @@
 		AABD7E9F1A9F73BB003919E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AABD7EBA1AA077A7003919E8 /* TMGoalView */,
 				AABD7EA01A9F73BB003919E8 /* TMGoalTableViewCell */,
 			);
 			path = Views;
@@ -302,6 +309,52 @@
 				AABD7EA91A9F7C9B003919E8 /* BentonSans-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AABD7EAE1AA059B2003919E8 /* TMGoalListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AABD7EAF1AA059B2003919E8 /* TMGoalListViewController.h */,
+				AABD7EB01AA059B2003919E8 /* TMGoalListViewController.m */,
+			);
+			path = TMGoalListViewController;
+			sourceTree = "<group>";
+		};
+		AABD7EB21AA059C1003919E8 /* TMGoalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AABD7EB31AA059DC003919E8 /* TMGoalViewController.h */,
+				AABD7EB41AA059DC003919E8 /* TMGoalViewController.m */,
+			);
+			path = TMGoalViewController;
+			sourceTree = "<group>";
+		};
+		AABD7EB61AA06169003919E8 /* TMRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				AABD7EB71AA06179003919E8 /* TMRoutes.h */,
+				AABD7EB81AA06179003919E8 /* TMRoutes.m */,
+			);
+			path = TMRoutes;
+			sourceTree = "<group>";
+		};
+		AABD7EBA1AA077A7003919E8 /* TMGoalView */ = {
+			isa = PBXGroup;
+			children = (
+				AABD7EBB1AA077B8003919E8 /* TMGoalView.h */,
+				AABD7EBC1AA077B8003919E8 /* TMGoalView.m */,
+			);
+			path = TMGoalView;
+			sourceTree = "<group>";
+		};
+		AABD7EBE1AA08CD4003919E8 /* UIImage+Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				AABD7EBF1AA08D48003919E8 /* UIImage+Gradient.h */,
+				AABD7EC01AA08D48003919E8 /* UIImage+Gradient.m */,
+			);
+			name = "UIImage+Gradient";
+			path = "Categories/UIImage+Gradient";
 			sourceTree = "<group>";
 		};
 		AAF86B101A9F2D8A00BFACB0 /* Constants */ = {
@@ -495,12 +548,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA24F7961A9F558F0038C179 /* TMDataManager.m in Sources */,
-				AA636F351A9F1E4E00E7AFE2 /* TMGoalsViewController.m in Sources */,
 				AA24F7A31A9F6AD40038C179 /* TMGoal.m in Sources */,
+				AABD7EBD1AA077B8003919E8 /* TMGoalView.m in Sources */,
 				AA24F7A61A9F6ADC0038C179 /* TMUser.m in Sources */,
+				AABD7EB11AA059B2003919E8 /* TMGoalListViewController.m in Sources */,
+				AABD7EB51AA059DC003919E8 /* TMGoalViewController.m in Sources */,
 				AA24F79B1A9F68C20038C179 /* TMGoalFormatter.m in Sources */,
 				AA636EF81A9F1B0100E7AFE2 /* main.m in Sources */,
 				AA24F7921A9F500F0038C179 /* TMAppearence.m in Sources */,
+				AABD7EB91AA06179003919E8 /* TMRoutes.m in Sources */,
+				AABD7EC11AA08D48003919E8 /* UIImage+Gradient.m in Sources */,
 				AA636F211A9F1D3300E7AFE2 /* AppDelegate.m in Sources */,
 				AABD7EA31A9F73CE003919E8 /* TMGoalTableViewCell.m in Sources */,
 			);
@@ -620,6 +677,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QapitalTest/Prefix.pch;
 				INFOPLIST_FILE = QapitalTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -633,6 +691,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QapitalTest/Prefix.pch;
 				INFOPLIST_FILE = QapitalTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMGoalsViewController : UIViewController
+@interface TMGoalListViewController : UIViewController
 
 @end

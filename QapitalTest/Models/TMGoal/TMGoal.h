@@ -19,4 +19,9 @@
 @property (nonatomic, strong) NSNumber *targetAmount;
 @property (nonatomic, strong) NSNumber *userId;
 
+/**
+ To check equality between 2 TMGoal objects.
+ */
+- (BOOL)isEqualToGoal:(TMGoal *)goal2;
+
 @end

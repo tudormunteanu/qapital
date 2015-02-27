@@ -10,6 +10,9 @@
 
 @implementation TMGoal
 
-
+- (BOOL)isEqualToGoal:(TMGoal *)goal2 {
+    
+    return [self.goalId isEqualToNumber:goal2.goalId];
+}
 
 @end
