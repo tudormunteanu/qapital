@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TMGoalsViewController.h
 //  QapitalTest
 //
 //  Created by Tudor Munteanu on 26/02/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TMGoalsViewController : UIViewController
 
 @end
-
