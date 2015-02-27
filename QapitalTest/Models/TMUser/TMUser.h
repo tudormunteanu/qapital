@@ -10,4 +10,8 @@
 
 @interface TMUser : NSObject
 
+@property (nonatomic, strong) NSString *avatarUrl;
+@property (nonatomic, strong) NSString *displayName;
+@property (nonatomic, strong) NSNumber *userId;
+
 @end

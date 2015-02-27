@@ -12,10 +12,13 @@
 #import "TMGoal.h"
 #import "TMGoalTableViewCell.h"
 #import "TMGoalListViewController.h"
+#import "TMUser.h"
+#import "TMUserCollectionViewCell.h"
 
 static NSString *cellIdentifier = @"goalCell";
+static NSString *collectionCellIdentifier = @"collectionCell";
 
-@interface TMGoalListViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TMGoalListViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) TMDataManager *dataManager;
 @property (nonatomic, strong) NSArray       *goals;
@@ -84,9 +87,6 @@ static NSString *cellIdentifier = @"goalCell";
     
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
     
     weakify(self);
     [self.dataManager getGoals:^(NSArray *goals) {
@@ -129,13 +129,61 @@ static NSString *cellIdentifier = @"goalCell";
     if (cell == nil) {
         
         cell = [[TMGoalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        [cell.connectedUsersCollectionView registerClass:[TMUserCollectionViewCell class] forCellWithReuseIdentifier:collectionCellIdentifier];
+        cell.connectedUsersCollectionView.userInteractionEnabled = NO;
+        cell.connectedUsersCollectionView.dataSource = self;
+        cell.connectedUsersCollectionView.delegate = self;
     }
+    
     TMGoal *goal = self.goals[indexPath.row];
     NSURL *imageURL = [NSURL URLWithString:goal.goalImageURL];
     [cell setBackgroundImageWithURL:imageURL];
     cell.titleLabel.text = goal.name;
-    cell.subtitleLabel.text = @"$1,582 saved of $3,090";
+    cell.connectedUsersCollectionView.tag = indexPath.row;
+    cell.subtitleLabel.text = goal.verboseBalance;
+    CGFloat progressVal = [goal.targetPercentage floatValue]/100.0f;
+    [cell.progressView setProgress:progressVal animated:NO];
+    [cell.connectedUsersCollectionView reloadData];
     return cell;
 }
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    TMGoal *goal = self.goals[collectionView.tag];
+    return [goal.connectedUsers count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TMGoal *goal = self.goals[collectionView.tag];
+    TMUserCollectionViewCell *cell = (TMUserCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:collectionCellIdentifier
+                                                                                                           forIndexPath:indexPath];
+    NSString *userId = goal.connectedUsers[indexPath.row];
+    
+    [self.dataManager getUserForId:userId completionBlock:^(TMUser *user) {
+        
+        NSURL *imageURL = [NSURL URLWithString:user.avatarUrl];
+        [cell.avatarImageView setImageWithURL:imageURL];
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake(40, 40);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
 
 @end

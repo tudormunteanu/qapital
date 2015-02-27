@@ -17,7 +17,9 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *status;
 @property (nonatomic, strong) NSNumber *targetAmount;
+@property (nonatomic, strong) NSNumber *targetPercentage;
 @property (nonatomic, strong) NSNumber *userId;
+@property (nonatomic, strong) NSString *verboseBalance;
 
 /**
  To check equality between 2 TMGoal objects.

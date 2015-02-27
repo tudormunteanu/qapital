@@ -9,6 +9,8 @@
 #import "AFNetworking.h"
 #import "TMDataManager.h"
 #import "TMGoalFormatter.h"
+#import "TMUserFormatter.h"
+#import "TMUser.h"
 
 @interface TMDataManager ()
 
@@ -66,6 +68,24 @@
         TMGoalFormatter *formatter = [[TMGoalFormatter alloc] init];
         NSArray *goals = [formatter goalsFromArray:responseDict[@"savingsGoals"]];
         completionBlock(goals);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        failureBlock(error);
+    }];
+}
+
+- (void)getUserForId:(NSString *)userId completionBlock:(void (^)(TMUser *user))completionBlock failure:(void (^)(NSError *error))failureBlock {
+    
+    NSString *path = [self urlStringForPath:[NSString stringWithFormat:@"/users/%@", userId]];
+    [self.manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+        //
+        // TODO: add more error handling in the case responseObject is not a dict
+        //
+        NSDictionary *responseDict = (NSDictionary *)responseObject;
+        TMUserFormatter *formatter = [[TMUserFormatter alloc] init];
+        TMUser *user = [formatter userFromDict:responseDict];
+        completionBlock(user);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         failureBlock(error);

@@ -29,6 +29,8 @@
 		AABD7EB91AA06179003919E8 /* TMRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EB81AA06179003919E8 /* TMRoutes.m */; };
 		AABD7EBD1AA077B8003919E8 /* TMGoalView.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EBC1AA077B8003919E8 /* TMGoalView.m */; };
 		AABD7EC11AA08D48003919E8 /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EC01AA08D48003919E8 /* UIImage+Gradient.m */; };
+		AABD7EC51AA0B3EB003919E8 /* TMUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EC41AA0B3EB003919E8 /* TMUserCollectionViewCell.m */; };
+		AABD7EC91AA0B68E003919E8 /* TMUserFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EC81AA0B68E003919E8 /* TMUserFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		AABD7EBC1AA077B8003919E8 /* TMGoalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMGoalView.m; sourceTree = "<group>"; };
 		AABD7EBF1AA08D48003919E8 /* UIImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
 		AABD7EC01AA08D48003919E8 /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
+		AABD7EC31AA0B3EB003919E8 /* TMUserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserCollectionViewCell.h; sourceTree = "<group>"; };
+		AABD7EC41AA0B3EB003919E8 /* TMUserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserCollectionViewCell.m; sourceTree = "<group>"; };
+		AABD7EC71AA0B68E003919E8 /* TMUserFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUserFormatter.h; sourceTree = "<group>"; };
+		AABD7EC81AA0B68E003919E8 /* TMUserFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUserFormatter.m; sourceTree = "<group>"; };
 		AAF86B111A9F2D8A00BFACB0 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		AAF86B121A9F2DB800BFACB0 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		DA7B2B7630994D0622440B21 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +155,7 @@
 		AA24F7971A9F68430038C179 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
+				AABD7EC61AA0B67B003919E8 /* TMUserFormatter */,
 				AA24F7981A9F68430038C179 /* TMGoalFormatter */,
 			);
 			path = Formatters;
@@ -285,6 +292,7 @@
 		AABD7E9F1A9F73BB003919E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AABD7EC21AA0B3D1003919E8 /* TMUserCollectionViewCell */,
 				AABD7EBA1AA077A7003919E8 /* TMGoalView */,
 				AABD7EA01A9F73BB003919E8 /* TMGoalTableViewCell */,
 			);
@@ -355,6 +363,24 @@
 			);
 			name = "UIImage+Gradient";
 			path = "Categories/UIImage+Gradient";
+			sourceTree = "<group>";
+		};
+		AABD7EC21AA0B3D1003919E8 /* TMUserCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AABD7EC31AA0B3EB003919E8 /* TMUserCollectionViewCell.h */,
+				AABD7EC41AA0B3EB003919E8 /* TMUserCollectionViewCell.m */,
+			);
+			path = TMUserCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AABD7EC61AA0B67B003919E8 /* TMUserFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				AABD7EC71AA0B68E003919E8 /* TMUserFormatter.h */,
+				AABD7EC81AA0B68E003919E8 /* TMUserFormatter.m */,
+			);
+			path = TMUserFormatter;
 			sourceTree = "<group>";
 		};
 		AAF86B101A9F2D8A00BFACB0 /* Constants */ = {
@@ -553,11 +579,13 @@
 				AA24F7A61A9F6ADC0038C179 /* TMUser.m in Sources */,
 				AABD7EB11AA059B2003919E8 /* TMGoalListViewController.m in Sources */,
 				AABD7EB51AA059DC003919E8 /* TMGoalViewController.m in Sources */,
+				AABD7EC51AA0B3EB003919E8 /* TMUserCollectionViewCell.m in Sources */,
 				AA24F79B1A9F68C20038C179 /* TMGoalFormatter.m in Sources */,
 				AA636EF81A9F1B0100E7AFE2 /* main.m in Sources */,
 				AA24F7921A9F500F0038C179 /* TMAppearence.m in Sources */,
 				AABD7EB91AA06179003919E8 /* TMRoutes.m in Sources */,
 				AABD7EC11AA08D48003919E8 /* UIImage+Gradient.m in Sources */,
+				AABD7EC91AA0B68E003919E8 /* TMUserFormatter.m in Sources */,
 				AA636F211A9F1D3300E7AFE2 /* AppDelegate.m in Sources */,
 				AABD7EA31A9F73CE003919E8 /* TMGoalTableViewCell.m in Sources */,
 			);

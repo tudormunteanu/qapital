@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class TMUser;
+
 @interface TMDataManager : NSObject
 
 + (TMDataManager *)sharedManager;
 
 - (void)getGoals:(void (^)(NSArray *goals))completionBlock failure:(void (^)(NSError *error))failureBlock;
+
+- (void)getUserForId:(NSString *)userId completionBlock:(void (^)(TMUser *user))completionBlock failure:(void (^)(NSError *error))failureBlock;
 
 @end

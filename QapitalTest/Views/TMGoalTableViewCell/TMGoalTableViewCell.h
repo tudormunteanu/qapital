@@ -10,9 +10,11 @@
 
 @interface TMGoalTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UIImageView *backgroundImageView;
-@property (nonatomic, strong) UILabel     *titleLabel;
-@property (nonatomic, strong) UILabel     *subtitleLabel;
+@property (nonatomic, strong) UIImageView      *backgroundImageView;
+@property (nonatomic, strong) UICollectionView *connectedUsersCollectionView;
+@property (nonatomic, strong) UIProgressView   *progressView;
+@property (nonatomic, strong) UILabel          *titleLabel;
+@property (nonatomic, strong) UILabel          *subtitleLabel;
 
 - (void)setBackgroundImageWithURL:(NSURL *)url;
 

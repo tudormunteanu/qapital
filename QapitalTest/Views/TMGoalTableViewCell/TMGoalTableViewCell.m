@@ -29,6 +29,7 @@
     if (self) {
     
         self.accessoryType = UITableViewCellAccessoryNone;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupComponents];
         [self setupSubviews];
     }
@@ -71,6 +72,7 @@
     
     [super prepareForReuse];
     self.backgroundImageView.image = nil;
+    [self.progressView setProgress:0 animated:NO];
 }
 
 - (void)setupComponents {
@@ -119,19 +121,42 @@
         make.top.equalTo(strongSelf.titleLabel.mas_bottom);
     }];
     
-    static const CGFloat progressOffsetY = 22;
+    static const CGFloat progressOffsetY = 22.0f;
+    static const CGFloat progressWidthMultiplier = 0.8f;
+    static const CGFloat progressHeight = 2.0f;
     
-    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
-    [progressView setProgress:0.8f animated:YES];
-    progressView.trackTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4f];
-    progressView.progressTintColor = [UIColor whiteColor];
-    [self.contentView addSubview:progressView];
-    [progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    self.progressView.trackTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4f];
+    self.progressView.progressTintColor = [UIColor whiteColor];
+    [self.progressView setProgress:0 animated:NO];
+    [self.contentView addSubview:self.progressView];
+    [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         strongify(weakSelf);
         make.centerX.equalTo(strongSelf.contentView.mas_centerX);
         make.centerY.equalTo(strongSelf.contentView.mas_centerY).with.offset(progressOffsetY);
-        make.width.equalTo(strongSelf.contentView.mas_width).multipliedBy(0.8f);
+        make.width.equalTo(strongSelf.contentView.mas_width).multipliedBy(progressWidthMultiplier);
+        make.height.equalTo(@(progressHeight));
+    }];
+    
+    //
+    // UICollectionView
+    //
+    static const CGFloat collectionViewWidth = 170.0f;
+    static const CGFloat collectionViewHeight = 110.0f;
+    static const CGFloat collectionViewBottom = -15.0f;
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    self.connectedUsersCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    self.connectedUsersCollectionView.backgroundColor = [UIColor clearColor];
+    [self.contentView addSubview:self.connectedUsersCollectionView];
+    [self.connectedUsersCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        strongify(weakSelf);
+        make.centerX.equalTo(strongSelf.contentView.mas_centerX);
+        make.width.equalTo(@(collectionViewWidth));
+        make.height.equalTo(@(collectionViewHeight));
+        make.bottom.equalTo(@(collectionViewBottom));
     }];
 }
 
