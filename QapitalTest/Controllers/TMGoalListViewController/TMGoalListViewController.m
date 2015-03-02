@@ -95,6 +95,12 @@ static NSString *collectionCellIdentifier = @"collectionCell";
         [strongSelf.tableView reloadData];
     } failure:^(NSError *error) {
         
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"")
+                                                        message:NSLocalizedString(@"Error_Description", @"")
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                                              otherButtonTitles:nil];
+        [alert show];
     }];
 }
 

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  QapitalTest
+
+  Created by Tudor Munteanu on 02/03/15.
+  Copyright (c) 2015 http://mowowstudios.com. All rights reserved.
+*/
+
+Error             = "Error";
+Error_Description = "Something went wrong when retrieving the data. Please try again later.";
+Ok                = "OK";

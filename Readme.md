@@ -12,6 +12,8 @@ To compile the project, run ``pod install`` in Terminal, while being in the same
 
 You will need to change the Bundle ID to your team's wildcard Bundle Identifier.
 
+Localization has been configured for the app and currently set to English and Swedish (well, not really Swedish, but the code works).
+
 ## Target iOS version
 
 The project is targeted currently for iOS 8+

@@ -37,6 +37,7 @@
 		AABD7EE81AA45C85003919E8 /* TMGoalViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EE71AA45C85003919E8 /* TMGoalViewControllerTests.m */; };
 		AABD7EEE1AA45E8E003919E8 /* TMAppearenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EED1AA45E8E003919E8 /* TMAppearenceTests.m */; };
 		AABD7EF01AA46320003919E8 /* TMDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AABD7EEF1AA46320003919E8 /* TMDataManagerTests.m */; };
+		AABD7EF91AA46D35003919E8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AABD7EFB1AA46D35003919E8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,11 @@
 		AABD7EE91AA45D92003919E8 /* TMGoalViewController+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMGoalViewController+Testing.h"; sourceTree = "<group>"; };
 		AABD7EED1AA45E8E003919E8 /* TMAppearenceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppearenceTests.m; sourceTree = "<group>"; };
 		AABD7EEF1AA46320003919E8 /* TMDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDataManagerTests.m; sourceTree = "<group>"; };
+		AABD7EF51AA46C4D003919E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AABD7EF61AA46C5F003919E8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AABD7EFA1AA46D35003919E8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABD7EFC1AA46D39003919E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABD7EFD1AA46D3A003919E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AAF86B111A9F2D8A00BFACB0 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		AAF86B121A9F2DB800BFACB0 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		DA7B2B7630994D0622440B21 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +292,7 @@
 				AABD7EA51A9F7C9B003919E8 /* Fonts */,
 				AA636F271A9F1D5300E7AFE2 /* Images.xcassets */,
 				AA636F231A9F1D5300E7AFE2 /* LaunchScreen.xib */,
+				AABD7EFB1AA46D35003919E8 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -561,6 +568,7 @@
 				AABD7EAC1A9F7C9B003919E8 /* BentonSans-Medium.otf in Resources */,
 				AABD7EAD1A9F7C9B003919E8 /* BentonSans-Regular.otf in Resources */,
 				AA636F2A1A9F1D5300E7AFE2 /* Images.xcassets in Resources */,
+				AABD7EF91AA46D35003919E8 /* Localizable.strings in Resources */,
 				AABD7EAA1A9F7C9B003919E8 /* BentonSans-Bold.otf in Resources */,
 				AA636F281A9F1D5300E7AFE2 /* LaunchScreen.xib in Resources */,
 				AABD7EAB1A9F7C9B003919E8 /* BentonSans-Light.otf in Resources */,
@@ -691,8 +699,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				AA636F241A9F1D5300E7AFE2 /* Base */,
+				AABD7EF51AA46C4D003919E8 /* en */,
+				AABD7EF61AA46C5F003919E8 /* sv */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		AABD7EFB1AA46D35003919E8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AABD7EFA1AA46D35003919E8 /* sv */,
+				AABD7EFC1AA46D39003919E8 /* en */,
+				AABD7EFD1AA46D3A003919E8 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
