@@ -42,6 +42,9 @@
 - (void)setupUIAppearance {
     
     [[UIBarButtonItem appearance] setTintColor:kColorQapitalMain];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSFontAttributeName: self.bentonMedium16,
+                                                           }];
 }
 
 #pragma mark - Private
@@ -51,6 +54,8 @@
     self.benton10 = [UIFont fontWithName:@"BentonSans" size:10];
     self.benton16 = [UIFont fontWithName:@"BentonSans" size:16];
     self.benton32 = [UIFont fontWithName:@"BentonSans" size:32];
+    
+    self.bentonMedium16 = [UIFont fontWithName:@"BentonSans-Medium" size:16];
     
     self.bentonBold32 = [UIFont fontWithName:@"BentonSans-Bold" size:32];
 }

@@ -6,5 +6,5 @@ pod 'DCKeyValueObjectMapping'
 pod 'JLRoutes'
 pod 'ColorUtils'
 target :QapitalTestTests, :exclusive => true do
-    pod 'Kiwi'
+    pod 'Kiwi', :head
 end

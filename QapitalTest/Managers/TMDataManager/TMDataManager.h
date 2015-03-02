@@ -10,11 +10,14 @@
 
 @class TMUser;
 
+typedef void(^GoalCompletionBlock)(NSArray *goals);
+typedef void(^GoalsFailureBlock)(NSError *error);
+
 @interface TMDataManager : NSObject
 
 + (TMDataManager *)sharedManager;
 
-- (void)getGoals:(void (^)(NSArray *goals))completionBlock failure:(void (^)(NSError *error))failureBlock;
+- (void)getGoals:(GoalCompletionBlock)completionBlock failure:(GoalsFailureBlock)failureBlock;
 
 - (void)getUserForId:(NSString *)userId completionBlock:(void (^)(TMUser *user))completionBlock failure:(void (^)(NSError *error))failureBlock;
 

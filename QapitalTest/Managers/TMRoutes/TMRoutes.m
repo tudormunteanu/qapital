@@ -20,7 +20,6 @@
         
         NSString *goalIdString = parameters[@"goalId"];
         NSNumber *goalId = [NSNumber numberWithInteger:[goalIdString integerValue]];
-        NSLog(@"=== goalId: %@", goalId);
         TMGoalViewController *goalViewController = [[TMGoalViewController alloc] initWithGoalId:goalId];
         UINavigationController *navController = (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
         [navController pushViewController:goalViewController animated:YES];

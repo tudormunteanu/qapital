@@ -86,7 +86,6 @@ static NSString *collectionCellIdentifier = @"collectionCell";
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
     
     weakify(self);
     [self.dataManager getGoals:^(NSArray *goals) {

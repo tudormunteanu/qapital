@@ -52,7 +52,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
